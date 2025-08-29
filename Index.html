@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProCall — B2B Appointment Setting & Cold Calling Agency</title>
+  <meta name="description" content="ProCall: Sleek, professional B2B cold-calling and appointment setting with a money-back guarantee." />
+  <meta name="keywords" content="B2B appointment setting, cold calling agency, money back guarantee, ProCall" />
+  <style>
+    :root{
+      --bg:#0b0f18; --bg-2:#0a1020; --panel:#0f172a;
+      --muted:#9aa4b2; --text:#e6eaf0;
+      --brand:#1d4ed8; --brand-2:#60a5fa; --accent:#10b981;
+      --radius:18px; --shadow:0 10px 30px rgba(0,0,0,.35)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:linear-gradient(180deg,var(--bg),var(--bg-2));
+      color:var(--text); line-height:1.65
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:1120px;margin:0 auto;padding:18px}
+
+    /* NAV */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(7,10,20,.7);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      padding-top:env(safe-area-inset-top);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+    .mark{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 4px 20px rgba(96,165,250,.45)}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .links a{font-size:14px;color:var(--muted)}
+    .links a.active{color:#fff;font-weight:600}
+
+    /* SECTIONS / HERO */
+    .hero{padding:48px 0 24px}
+    .hero-wrap{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+    h1{margin:0;font-size:clamp(28px,4.5vw,48px);line-height:1.1}
+    h2{margin:0 0 8px 0;font-size:clamp(22px,3.2vw,30px)}
+    .lead{color:var(--muted);font-size:clamp(15px,2.4vw,18px);max-width:65ch}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.4);color:#c7f9e9;font-size:13px}
+    .glass{border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.10);box-shadow:var(--shadow)}
+    .mock{
+      aspect-ratio:16/10;border-radius:var(--radius);
+      background:
+        radial-gradient(1200px 300px at -10% -20%,rgba(29,78,216,.25),transparent 60%),
+        radial-gradient(900px 300px at 120% 20%,rgba(96,165,250,.20),transparent 60%),
+        linear-gradient(180deg,#0e142b,#0a0f20);
+      display:grid;place-items:center;color:#cbd5e1;border:1px solid rgba(255,255,255,.08)
+    }
+    .muted{color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));backdrop-filter:blur(6px);box-shadow:var(--shadow);cursor:pointer}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#0b1020;border:none}
+    .btn-ghost{background:rgba(255,255,255,.06)}
+    .section{padding:36px 0}
+    .grid{display:grid;gap:16px}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+    .card{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .card h3{margin:.3rem 0}
+    .testimonials{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .quote{padding:16px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04)}
+    .quote footer{margin-top:8px;color:var(--muted);font-size:14px}
+    footer{padding:28px 0;color:#94a3b8;font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
+
+    /* RESPONSIVE */
+    @media (min-width: 900px){
+      .hero{padding:64px 0 32px}
+      .hero-wrap{grid-template-columns:1.1fr .9fr}
+    }
+    @media (prefers-reduced-motion:no-preference){
+      .btn, .card{transition:transform .15s ease, box-shadow .2s ease}
+      .card:hover{transform:translateY(-2px)}
+    }
+    section[id]{scroll-margin-top:72px}
+  </style>
+</head>
+<body>
+  <!-- Paste this file as index.html. Host on GitHub Pages (username.github.io). -->
+
+  <header>
+    <div class="container nav">
+      <div class="logo"><span class="mark" aria-hidden="true"></span> ProCall</div>
+      <nav class="links" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#guarantee">Guarantee</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main id="home" class="container hero">
+    <div class="hero-wrap">
+      <div>
+        <span class="badge" aria-label="Money-back guarantee">🛡️ 20 Appointments in 40 Days — or Your Money Back</span>
+        <h1>Cold calling that puts <em>risk on us</em>, not you.</h1>
+        <p class="lead">ProCall is a polished, professional B2B appointment-setting partner. We handle the outreach, you step into booked meetings. Our zero-risk guarantee removes hesitation and keeps the focus on results.</p>
+        <div class="grid" style="grid-template-columns:1fr;gap:12px;max-width:520px;margin-top:10px">
+          <!-- PAY NOW — PayPal (hidden merchant + amount; price not shown on site) -->
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="aj.az@live.co.uk"><!-- hidden merchant -->
+            <input type="hidden" name="item_name" value="ProCall Result-Backed Campaign">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="amount" value="2000.00"><!-- shows only on PayPal checkout -->
+            <button type="submit" class="btn btn-primary" aria-label="Secure Checkout">🔒 Secure Checkout</button>
+          </form>
+          <!-- (No Calendly) -->
+        </div>
+        <p class="muted" style="margin-top:8px">We keep things discreet—no industry list, no internal tool parade. Professional execution, visible results.</p>
+      </div>
+      <div class="glass mock" aria-hidden="true">
+        <div>
+          <div style="font-size:22px;margin-bottom:6px;">Sleek blue-black interface</div>
+          <small>Responsive across phone, tablet, and laptop</small>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SERVICES -->
+  <section id="services" class="section container">
+    <h2>Services</h2>
+    <p class="lead" style="margin-top:0">We specialize in professional cold calling and appointment setting for businesses. You get qualified meetings added to your calendar—clean, simple, and consistent.</p>
+    <div class="grid cards" style="margin-top:10px">
+      <article class="card">
+        <h3>Discovery</h3>
+        <p>We align on your buyer profile, voice, and calendar windows. You retain control of tone and availability.</p>
+      </article>
+      <article class="card">
+        <h3>Targeted Outreach</h3>
+        <p>Experienced callers run focused conversations with decision-makers and handle confirmations.</p>
+      </article>
+      <article class="card">
+        <h3>Booked Meetings</h3>
+        <p>We place meetings directly on your calendar and keep details tight, clear, and easy to act on.</p>
+      </article>
+      <article class="card">
+        <h3>Iterate & Refine</h3>
+        <p>Short feedback loops let us adjust scripts and angles while maintaining quality and pace.</p>
+      </article>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr;max-width:520px;margin-top:14px">
+      <a class="btn btn-primary" href="#guarantee">See our Guarantee</a>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section id="guarantee" class="section container glass" style="padding:18px">
+    <h2>Guarantee</h2>
+    <p class="lead" style="margin:0">If we don’t deliver <strong>20 appointments in 40 days</strong>, you get a full refund. Straightforward and professional.</p>
+    <ul class="muted" style="margin:10px 0 0 0;padding-left:18px">
+      <li>Applies to one active campaign per purchase.</li>
+      <li>You agree to attend scheduled meetings and provide timely feedback.</li>
+      <li>Request any refund within 7 days after the 40-day window closes.</li>
+    </ul>
+    <div class="grid" style="grid-template-columns:1fr;max-width:520px;margin-top:14px">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="aj.az@live.co.uk">
+        <input type="hidden" name="item_name" value="ProCall Result-Backed Campaign">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="amount" value="2000.00">
+        <button type="submit" class="btn btn-primary" aria-label="Secure Checkout from Guarantee">🔒 Secure Checkout</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="section container">
+    <h2>Client Testimonials</h2>
+    <p class="muted" style="margin-top:0">Add client quotes here later—names, titles, and companies build confidence. Photos or short clips are ideal.</p>
+    <div class="testimonials" style="margin-top:10px">
+      <figure class="quote">
+        <blockquote>“Add a concise, results-focused testimonial here. Keep it specific and professional.”</blockquote>
+        <footer>— Client Name, Title at Company</footer>
+      </figure>
+      <figure class="quote">
+        <blockquote>“Second testimonial placeholder. When you provide content, we’ll replace these.”</blockquote>
+        <footer>— Client Name, Title at Company</footer>
+      </figure>
+      <figure class="quote">
+        <blockquote>“Third testimonial placeholder. Optional photo/video can go above the quote.”</blockquote>
+        <footer>— Client Name, Title at Company</footer>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section container">
+    <h2>About ProCall</h2>
+    <p class="lead" style="margin-top:0">We’re a focused team dedicated to professional outreach and trust-first client relationships. Our mission is simple: fill your calendar with quality conversations while removing risk.</p>
+    <div class="grid cards" style="margin-top:10px">
+      <article class="card">
+        <h3>Professionalism</h3>
+        <p>Polished communication, consistent cadence, and premium presentation at every step.</p>
+      </article>
+      <article class="card">
+        <h3>Discretion</h3>
+        <p>We don’t publish industry lists or internal tools. Your campaign is handled quietly and effectively.</p>
+      </article>
+      <article class="card">
+        <h3>Ownership</h3>
+        <p>Clear accountability and a money-back guarantee keep incentives aligned on outcomes.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section container">
+    <h2>Contact</h2>
+    <p class="muted" style="margin-top:0">Use the quick form below and we’ll get back to you.</p>
+    <div class="grid" style="grid-template-columns:1fr;gap:14px">
+      <!-- Simple email form (mailto; your address is embedded but NOT printed) -->
+      <form class="card" onsubmit="return composeMail(event)" style="display:grid;gap:10px">
+        <label>
+          <div>Name</div>
+          <input required type="text" name="name" placeholder="Your name" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1328;color:var(--text)">
+        </label>
+        <label>
+          <div>Email</div>
+          <input required type="email" name="email" placeholder="you@company.com" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1328;color:var(--text)">
+        </label>
+        <label>
+          <div>Company</div>
+          <input type="text" name="company" placeholder="Company name" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1328;color:var(--text)">
+        </label>
+        <label>
+          <div>Message</div>
+          <textarea required name="message" rows="4" placeholder="Tell us a bit about your goals" style="width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:#0b1328;color:var(--text)"></textarea>
+        </label>
+        <button type="submit" class="btn btn-ghost">✉️ Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="y"></span> ProCall · All rights reserved · <a href="#privacy">Privacy</a> · <a href="#terms">Terms</a></div>
+  </footer>
+
+  <!-- Minimal Privacy & Terms -->
+  <section id="privacy" class="section container" style="padding-top:0">
+    <h2>Privacy</h2>
+    <p class="muted">We collect only what’s necessary to deliver your campaign (contact details and meeting preferences). We do not sell personal data.</p>
+  </section>
+  <section id="terms" class="section container" style="padding-top:0">
+    <h2>Terms</h2>
+    <p class="muted">Payment covers a single, result-backed campaign. If 20 appointments are not delivered within 40 days, you may request a refund within 7 days after the period ends. You agree to attend scheduled meetings and provide timely feedback. These terms may be updated as needed.</p>
+  </section>
+
+  <script>
+    // Footer year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll('section[id], main#home');
+    const navLinks = [...document.querySelectorAll('#nav a')];
+    function onScroll(){
+      let current = 'home', fromTop = window.scrollY + 90;
+      sections.forEach(sec => { if (sec.offsetTop <= fromTop) current = sec.id || 'home'; });
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+    }
+    document.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+
+    // Mailto helper (your address is embedded but not printed)
+    function composeMail(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value.trim());
+      const email = encodeURIComponent(f.email.value.trim());
+      const company = encodeURIComponent(f.company.value.trim());
+      const msg = encodeURIComponent(f.message.value.trim());
+      const subject = `New enquiry — ${decodeURIComponent(name)}`;
+      const body =
+        `Name: ${decodeURIComponent(name)}%0A`+
+        `Email: ${decodeURIComponent(email)}%0A`+
+        `Company: ${decodeURIComponent(company)}%0A%0A`+
+        `${decodeURIComponent(msg)}`;
+      const mailto = `mailto:aj.az@live.co.uk?subject=${encodeURIComponent(subject)}&body=${body}`;
+      window.location.href = mailto;
+      return false;
+    }
+  </script>
+
+  <!-- Note: Checkout opens on paypal.com. Processor domain/account details are controlled by PayPal and cannot be hidden. -->
+</body>
+</html>
